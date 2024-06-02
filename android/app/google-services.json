@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "781245252068",
+    "project_id": "umn-fellowship-app",
+    "storage_bucket": "umn-fellowship-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781245252068:android:5356d7e56c516cd4a4c7f1",
+        "android_client_info": {
+          "package_name": "com.example.umnFellowshipApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6e1AuAd2HiyvMH9oFixXD7o_XvBpZqmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
