@@ -7,13 +7,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("UMN Infectious Diseases"),
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Image.asset("assets/images/umn_logo.png"),
-        ),
-      ),
       body: Stack(
         children: [
           SvgPicture.asset(
@@ -23,8 +16,113 @@ class HomeScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
           ),
-          Center(
-            child: Text("Welcome to the UMN ID Fellowship App!"),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                "assets/images/umn_logo.png",
+                width: 200,
+                height: 200,
+              ),
+              const Center(
+                child: Text("UMN Infectious Diseases Fellowship App",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                    )),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            blurRadius: 5,
+                            spreadRadius: 1)
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
+                    child: const Text(
+                      "Antibiogram",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
+                  ),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            blurRadius: 5,
+                            spreadRadius: 1)
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
+                    child: const Text(
+                      "Antibiogram",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            blurRadius: 5,
+                            spreadRadius: 1)
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
+                    child: const Text(
+                      "Antibiogram",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
+                  ),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            blurRadius: 5,
+                            spreadRadius: 1)
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
+                    child: const Text(
+                      "Antibiogram",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
