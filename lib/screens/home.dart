@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:umn_fellowship_app/widgets/home_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               Image.asset(
                 "assets/images/umn_logo.png",
                 width: 200,
-                height: 200,
+                height: 150,
               ),
               const Center(
                 child: Text("UMN Infectious Diseases Fellowship App",
@@ -32,94 +33,18 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.white,
                     )),
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            blurRadius: 5,
-                            spreadRadius: 1)
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.all(10),
-                    child: const Text(
-                      "Antibiogram",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                    ),
-                  ),
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            blurRadius: 5,
-                            spreadRadius: 1)
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.all(10),
-                    child: const Text(
-                      "Antibiogram",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                    ),
-                  ),
+                  HomeButton(color: Colors.amberAccent, title: "Testing"),
+                  HomeButton(color: Colors.greenAccent, title: "A Test Button"),
                 ],
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            blurRadius: 5,
-                            spreadRadius: 1)
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.all(10),
-                    child: const Text(
-                      "Antibiogram",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                    ),
-                  ),
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            blurRadius: 5,
-                            spreadRadius: 1)
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.all(10),
-                    child: const Text(
-                      "Antibiogram",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                    ),
-                  ),
+                  HomeButton(color: Colors.yellowAccent, title: "Another Test"),
+                  HomeButton(color: Colors.blueAccent, title: "Test Button")
                 ],
               ),
             ],
