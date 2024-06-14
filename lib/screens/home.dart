@@ -1,12 +1,19 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:umn_fellowship_app/widgets/home_button.dart';
+import 'package:umn_fellowship_app/widgets/brutalist_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage("assets/images/background.svg"), context);
+    precacheImage(const AssetImage("assets/images/umn_logo.png"), context);
+    precacheImage(const AssetImage("assets/images/abx.jpg"), context);
+    precacheImage(const AssetImage("assets/images/lecture.jpg"), context);
+    precacheImage(const AssetImage("assets/images/resources.jpg"), context);
+    precacheImage(const AssetImage("assets/images/meetings.jpg"), context);
+
     return Scaffold(
       body: Stack(
         children: [
@@ -25,6 +32,7 @@ class HomeScreen extends StatelessWidget {
                 width: 200,
                 height: 150,
               ),
+              const SizedBox(height: 20),
               const Center(
                 child: Text("UMN Infectious Diseases Fellowship App",
                     textAlign: TextAlign.center,
@@ -33,18 +41,33 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.white,
                     )),
               ),
-              const Row(
+              const SizedBox(height: 20),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  HomeButton(color: Colors.amberAccent, title: "Testing"),
-                  HomeButton(color: Colors.greenAccent, title: "A Test Button"),
+                  BrutalistButton(
+                      image: Image.asset("assets/images/abx.jpg",
+                          fit: BoxFit.cover),
+                      text: "Antibiogram"),
+                  BrutalistButton(
+                      image: Image.asset("assets/images/lecture.jpg",
+                          fit: BoxFit.cover),
+                      text: "Lectures"),
                 ],
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  HomeButton(color: Colors.yellowAccent, title: "Another Test"),
-                  HomeButton(color: Colors.blueAccent, title: "Test Button")
+                  BrutalistButton(
+                      image: Image.asset("assets/images/resources.jpg",
+                          fit: BoxFit.cover),
+                      text: "Resources"),
+                  BrutalistButton(
+                      image: Image.asset(
+                        "assets/images/meetings.jpg",
+                        fit: BoxFit.cover,
+                      ),
+                      text: "Meetings"),
                 ],
               ),
             ],

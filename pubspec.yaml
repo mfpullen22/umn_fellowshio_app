@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   firebase_core: ^2.32.0
   flutter_svg: ^2.0.10+1
+  neubrutalism_ui: ^2.0.2
+  google_fonts: ^6.2.1
+  flutter_pdfview: ^1.3.2
+  path_provider: ^2.1.3
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +68,15 @@ flutter:
   assets:
     - assets/images/umn_logo.png
     - assets/images/background.svg
-  #   - images/a_dot_ham.jpeg
+    - assets/images/abx.jpg
+    - assets/images/lecture.jpg
+    - assets/images/resources.jpg
+    - assets/images/meetings.jpg
+    - assets/pdfs/anaplasma.pdf
+    - assets/pdfs/bioterror.pdf
+    - assets/pdfs/frostbite.pdf
+    - assets/pdfs/m_abscessus.pdf
+    - assets/pdfs/neurosyphilis.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
