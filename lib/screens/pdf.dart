@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
 class PDFScreen extends StatelessWidget {
+  const PDFScreen({required this.path, required this.title, super.key});
   final String path;
-  const PDFScreen({required this.path, super.key});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class PDFScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text('PDF Viewer', style: TextStyle(color: Colors.white)),
+        title: Text(title, style: const TextStyle(color: Colors.white)),
       ),
       body: PDFView(
         filePath: path,

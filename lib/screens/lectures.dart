@@ -1,10 +1,11 @@
 import "package:flutter/material.dart";
-import 'package:flutter/services.dart';
 import 'package:umn_fellowship_app/models/lectures.dart';
-import 'package:umn_fellowship_app/screens/pdf.dart';
-import 'package:path_provider/path_provider.dart';
-import 'dart:io';
+import "package:umn_fellowship_app/services/pdf_handler.dart";
 import 'package:flutter_svg/flutter_svg.dart';
+/* import 'package:umn_fellowship_app/screens/pdf.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:io'; 
+import 'package:flutter/services.dart'; */
 
 class LecturesScreen extends StatelessWidget {
   const LecturesScreen({super.key});
@@ -19,7 +20,7 @@ class LecturesScreen extends StatelessWidget {
       Lecture(title: "Neurosyphilis", fileName: "neurosyphilis.pdf"),
     ];
 
-    Future<void> openPDF(BuildContext context, String fileName) async {
+/*     Future<void> openPDF(BuildContext context, String fileName) async {
       String path = (await getApplicationDocumentsDirectory()).path;
       String assetPath = 'assets/pdfs/$fileName';
       String filePath = '$path/$fileName';
@@ -36,7 +37,7 @@ class LecturesScreen extends StatelessWidget {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => PDFScreen(path: filePath)));
       }
-    }
+    } */
 
     return Scaffold(
       body: Stack(
@@ -93,7 +94,8 @@ class LecturesScreen extends StatelessWidget {
                               leading: const Icon(Icons.picture_as_pdf),
                               title: Text(lectures[index].title),
                               onTap: () {
-                                openPDF(context, lectures[index].fileName);
+                                openPDF(context, lectures[index].fileName,
+                                    lectures[index].title);
                               },
                             ),
                           );

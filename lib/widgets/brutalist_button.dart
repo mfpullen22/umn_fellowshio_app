@@ -1,13 +1,17 @@
 import "package:flutter/material.dart";
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:umn_fellowship_app/screens/lectures.dart';
 
 class BrutalistButton extends StatelessWidget {
-  const BrutalistButton({super.key, required this.image, required this.text});
+  const BrutalistButton(
+      {super.key,
+      required this.image,
+      required this.text,
+      required this.onTap});
 
   final Image image;
   final String text;
+  final Future<void> Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +22,7 @@ class BrutalistButton extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
           splashColor: Colors.grey.withOpacity(0.3),
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const LecturesScreen()));
-          },
+          onTap: onTap,
           child: NeuContainer(
             height: 150,
             width: 150,
