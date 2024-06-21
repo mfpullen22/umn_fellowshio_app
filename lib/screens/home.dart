@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:umn_fellowship_app/screens/lectures.dart';
-import 'package:umn_fellowship_app/screens/news.dart';
+import 'package:umn_fellowship_app/screens/news_item.dart';
 import 'package:umn_fellowship_app/widgets/brutalist_button.dart';
 import "package:umn_fellowship_app/services/pdf_handler.dart";
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
-import "package:umn_fellowship_app/data/news.dart";
+import "package:umn_fellowship_app/data/news_dummy.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
